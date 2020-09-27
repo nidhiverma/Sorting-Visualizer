@@ -28,7 +28,7 @@ function vis_speed() {
 var c_delay = 0;
 
 function div_update(chart, height, color) {
-  window.setTimeout(function() {
+  window.setTimeout(function () {
     chart.style =
       "margin:0%" +
       margin_size +
@@ -43,16 +43,16 @@ function div_update(chart, height, color) {
 }
 
 function enable_buttons() {
-  window.setTimeout(function() {
+  window.setTimeout(function () {
     for (var i = 0; i < algo_chosen.length; i++) {
       algo_chosen[i].classList = [];
-      algo_chosen[i].classList.add("butt_unselected");
+      algo_chosen[i].classList.add("butt_unselected", "algo");
       algo_chosen[i].disabled = false;
     }
     inp_as.disabled = false;
     a_generate.disabled = false;
     inp_aspeed.disabled = false;
     a_generate.classList = [];
-    a_generate.classList.add("generate")
+    a_generate.classList.add("generate");
   }, (c_delay += delay_time));
 }
