@@ -13,22 +13,22 @@ function merge(start, mid, end) {
   for (var i = start; i <= end; i++) {
     if (p > mid) {
       temp[k++] = div_sizes[q++];
-      div_update(divs[q - 1], div_sizes[q - 1], "yellpw");
+      div_update(divs[q - 1], div_sizes[q - 1], "#40e334");
     } else if (q > end) {
       temp[k++] = div_sizes[p++];
-      div_update(divs[p - 1], div_sizes[p - 1], "yellow");
+      div_update(divs[p - 1], div_sizes[p - 1], "#40e334");
     } else if (div_sizes[p] < div_sizes[q]) {
       temp[k++] = div_sizes[p++];
-      div_update(divs[p - 1], div_sizes[p - 1], "yellow");
+      div_update(divs[p - 1], div_sizes[p - 1], "#40e334");
     } else {
       temp[k++] = div_sizes[q++];
-      div_update(divs[q - 1], div_sizes[q - 1], "yellow");
+      div_update(divs[q - 1], div_sizes[q - 1], "#40e334");
     }
   }
 
   for (var t = 0; t < k; t++) {
     div_sizes[start++] = temp[t];
-    div_update(divs[start - 1], div_sizes[start - 1], "green");
+    div_update(divs[start - 1], div_sizes[start - 1], "#410b78");
   }
 }
 
